@@ -1,14 +1,51 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="app" class="nav">
     <ion-title>
-      Ionic Blank
+      Update Profile 
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content padding class="bg_content">
+
+     <div class="profile-image">
+            <img [src]="base64Image">
+
+      </div>
+
+          <div class="div1">
+
+            <button ion-button color="app2" type="button" round  id="button1"  (click)="TakePhoto()">
+                <ion-icon name="md-camera"></ion-icon>
+            </button>
+            <button ion-button color="app2" type="button" round  id="button1" (click)="ChoosePhoto()">
+                <ion-icon name="md-image"></ion-icon>
+            </button>
+            <button ion-button color="app2" type="button" round  id="button1" (click)="SavePicture()">
+                <ion-icon name="md-arrow-forward"></ion-icon>
+            </button>
+
+            </div>
+         
+  
+        <br>
+
+        <ion-item class="input1" >
+            <label stacked >fisrtName :</label>
+            <ion-input type="text" placeholder="Enter your FirstName" [(ngModel)]="firstName"></ion-input>
+          </ion-item>
+          <ion-item class="input1" >
+  
+            <label stacked >LastName : </label>
+            <ion-input type="text" placeholder="Enter your LastName" [(ngModel)]="lastName"></ion-input>
+          </ion-item>
+  
+          <ion-item class="input1" >
+            <label stacked >phone_number :</label>
+            <ion-input type="text" placeholder="Enter your phone number" [(ngModel)]="phoneNumber"></ion-input>
+          </ion-item>
+          <button ion-button full round  (click)="SaveUserData()" color="app" id="button1">SAVE</button>
+
+
 </ion-content>
+

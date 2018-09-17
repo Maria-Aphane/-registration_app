@@ -1,0 +1,26 @@
+
+<ion-content padding  class="bg_content">
+        <br><br><br><br><br><br><br><br>
+    
+
+      <ion-item class="input1" >
+  
+        <label stacked >Email</label>
+        <ion-input [(ngModel)]="email"  placeholder="Enter you email address" ><ion-icon name="mail"></ion-icon></ion-input>
+        </ion-item>
+        <ion-item  class="input1">
+            <label stacked >Password</label>
+            <ion-input [(ngModel)]="password"  placeholder="Enter your password"><ion-icon ios="ios-key" md="md-key"></ion-icon></ion-input>
+        </ion-item>
+            <button ion-button full round  (click)="signIn()" color="app" id="button1" >Sign_In</button>
+            <button ion-button full round color="danger" (click)="loginWithGoogle()" id="button1" ><ion-icon name="logo-googleplus" ></ion-icon>Sign_in with google</button>
+              
+              
+  
+  
+  <button ion-button clear style="float:right;" color="primary" (click)="forgotPassword()">Forgot Password?</button>
+  
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <button ion-button clear  style="float:middle;" color="primary" (click)="SignUp()">have an account?Create Account</button>
+         
+  </ion-content>
